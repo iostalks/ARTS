@@ -9,9 +9,13 @@ LeetCode 72 Edit Distance:
 > 3. Replace a character
 > 
 > Example 1:
+
 > **Input:** word1 = “horse”, word2 = “ros”
+
 > **Output:** 3
+
 > **Explanation:** 
+
 > horse -\> rorse (replace ‘h’ with ‘r’)
 > rorse -\> rose (remove ‘r’)
 > rose -\> ros (remove ‘e’)
@@ -79,7 +83,9 @@ LeetCode 72 Edit Distance:
 
 如下是单词`abc`和`acb`的填表结果。
 
-![image](https://github.com/iostalks/ARTS/blob/master/img/arts_1_array.png)
+
+
+
 
 第一行和第一列代表从空字符到当前字符结尾的单词，需要编辑的距离，由单词长度决定，所以可以先填上。之后根据左、上、左上的值来计算当前格子的最短编辑距离。如果当前对比的两个字符不相等，则由这三个位置上的编辑距离加一，求最小值得到，如果当前对比的两个字符相等，可能有两种情况得来：
 
@@ -99,7 +105,7 @@ LeetCode 72 Edit Distance:
 	    }
 	    return min;
 	}
-    
+	
 	var minDistance = function(word1, word2) {
 	    const m = word1.length + 1, n = word2.length + 1;
 	    const minDist = [];
@@ -209,4 +215,3 @@ UIScrollView 不能滚动怎么行？因此需要在 UIScrollView 实现上做�
 如果希望学习一项技术，应该对这项技术在什么时候做价值输出有一个预估。比如说学了之后写文章做分享，需要在截止时间内发出，它可以是不完美的。
 
 就像爱因斯坦小板凳的故事，板凳虽然粗糙但它是板凳，而如果到截止时间只完成一条精致的腿，那就什么都不是了。
-
