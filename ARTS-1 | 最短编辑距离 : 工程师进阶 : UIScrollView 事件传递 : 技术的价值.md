@@ -79,11 +79,12 @@ LeetCode 72 Edit Distance:
 
 如下是单词`abc`和`acb`的填表结果。
 
-file:///.file/id=6571367.8657679112
+![image](https://github.com/iostalks/ARTS/blob/master/img/arts_1_array.png)
 
 第一行和第一列代表从空字符到当前字符结尾的单词，需要编辑的距离，由单词长度决定，所以可以先填上。之后根据左、上、左上的值来计算当前格子的最短编辑距离。如果当前对比的两个字符不相等，则由这三个位置上的编辑距离加一，求最小值得到，如果当前对比的两个字符相等，可能有两种情况得来：
 
 一、由前一步的单词增加或删除字符得到相同的字符，(i-1，j)/(i, j-1) -\> (i, j)，即上面和左边递推的情况，此时编辑距离要加一。
+
 二、如果 i 和 j 都由前一步加一得到，(i-1，j-1)-\> (i, j)，并且字符相等，代表这一步没有做任何编辑操作，所以编辑距离不需要变化，也就是左上角的递推情况。
 
 完整的代码如下：
@@ -98,7 +99,7 @@ file:///.file/id=6571367.8657679112
 	    }
 	    return min;
 	}
-	
+    
 	var minDistance = function(word1, word2) {
 	    const m = word1.length + 1, n = word2.length + 1;
 	    const minDist = [];
@@ -133,7 +134,7 @@ file:///.file/id=6571367.8657679112
 
 英文阅读，工程师职业发展所需的 12 种软技能，分为两部分，这里是原文的第一部分。
 
- [https://www.asme.org/engineering-topics/articles/technology-and-society/12-skills-need-advance-career-part-1][1] 
+https://www.asme.org/engineering-topics/articles/technology-and-society/12-skills-need-advance-career-part-1
 
 虽然文中讲述的是工程师，没有说具体的工种，但作为程序员，也属于工程师的一种。这些软技能，也有一定的参考价值
 
