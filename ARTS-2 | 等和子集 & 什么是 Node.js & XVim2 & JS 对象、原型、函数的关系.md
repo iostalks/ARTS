@@ -4,7 +4,7 @@
 
 LeetCode 416. Partition Equal Subset Sum
 >Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.
-
+>
 >Note:
 >
 >Each of the array element will not exceed 100.
@@ -46,7 +46,7 @@ LeetCode 416. Partition Equal Subset Sum
 
 将 nums = {1, 5, 5, 11 } 递推情况画成表格如下：
 
-![image](./img/arts_2_algo)
+![image](./img/arts_2_algo.png)
 
 第 0 个元素选择需要特殊处理，不选择时和为 0，选择和为 nums[0]，即 1。
 接下来的选择，都是基于前一次，选择或不选择的结果。红色代表不选择本次元素的结果（即与上一次相同），绿色表示选择了本次的元素。
@@ -195,13 +195,13 @@ JavaScript 中是没有类的概念的，虽然在 ES6 中引入了类，其实�
 
 如果没有类，JavaScript 是如何实现数据或者方法在对象中复用的呢？它是基于原型模式设计的。
 
-当我们声明了一个函数 Person，它默认会拥有`prototype`属性，该属性的值指向称 P。P 会默认具有`constructor`属性指向 Person 函数。
+当我们声明了一个函数 Person，它默认会拥有`prototype`属性，该属性的值指向我们暂且称它为 P。P 会默认具有`constructor`属性指向 Person 函数。
 
 ```
 Person.prototype.constructor == Person // true
 ```
 
-我们再通过这个函数创建一个对象：
+我们通过这个函数创建一个对象：
 
 ```
 const person = new Person();
@@ -215,19 +215,23 @@ person.[[prototype]] == P // true
 
 它们的关系图如下：
 
-[image](./img/arts_2_js.png)
+```
+![image](./img/arts_2_js.png)
+```
 
 它们三者的关系看起来非常复杂，但实际目的只有一个，使我们创建的 person 能够“继承”P，从而复用 P 的方法和属性。
 
 person.toString() // "[object Object]"
 
-在创建 person 时 并没有 toString 属性，也没有在 Person 函数中声明过，而是使用了原型中定义的方法。person 与原型的关系是通过函数隐式构建的。
+在创建 person 时并没有添加 toString 属性，也没有在 Person 函数中声明过，而是使用了原型 P 中定义的方法。
+
+person 能够与原型建立联系是通过函数隐式构建的。
 
 严格意义上讲，上图是不对的，person 对象的 [[prototype]] 和 constructor 属性其实是通过原型链间接获得的，但如果从访问者角度看，它们是成立的。
 
 其实，函数和原型也都是对象，只是在不同的时候需要扮演的角色不同，如果将他们混为一谈的去看，可能会觉得很凌乱。
 
-如果当把函数当函数看，它就是用来调用，或者创建对象，并链接到原型的。如果把函数当对象看，它也是由函数创建，并具有 [[prototype]] 属性的指向它的原型 Function 对象。
+如果当把函数当函数看，它就是用来调用，或者创建对象，并链接到原型的。如果把函数当对象看，它也是由函数创建，并具有 [[prototype]] 属性的指向它的原型 Function。
 
 对象都会具有 [[prototype]] 和 constructor 属性，前者指向它的原型，后者指向它的构造函数。函数都会具有 prototype 属性，所有由该函数构建的对象都会指向它。
 
