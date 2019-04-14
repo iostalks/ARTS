@@ -46,7 +46,7 @@ LeetCode 416. Partition Equal Subset Sum
 
 将 nums = {1, 5, 5, 11 } 递推情况画成表格如下：
 
-![image]()
+![image](./img/arts_2_algo)
 
 第 0 个元素选择需要特殊处理，不选择时和为 0，选择和为 nums[0]，即 1。
 接下来的选择，都是基于前一次，选择或不选择的结果。红色代表不选择本次元素的结果（即与上一次相同），绿色表示选择了本次的元素。
@@ -151,9 +151,11 @@ Node.js 为 JavaScript 提供不同于浏览器的运行时的能力，所以可
 
 Xcode 重签名其实很简单，打开“钥匙串”应用程序，选中“登录”，然后按如下如创建证书。
 
-![image]()
+![image](./img/arts_2_vim.png)
 
 为证书取一个名字，这里使用 XcodeSiger，并选择自签名类型。
+
+![image](./img/arts_2_vim2.png)
 
 接着在终端中执行如下重签名命令（最后一个参数是 Xcode 的路径）：
 
@@ -213,7 +215,7 @@ person.[[prototype]] == P // true
 
 它们的关系图如下：
 
-[image]()
+[image](./img/arts_2_js.png)
 
 它们三者的关系看起来非常复杂，但实际目的只有一个，使我们创建的 person 能够“继承”P，从而复用 P 的方法和属性。
 
