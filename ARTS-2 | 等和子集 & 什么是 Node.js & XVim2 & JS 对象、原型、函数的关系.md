@@ -215,9 +215,7 @@ person.[[prototype]] == P // true
 
 它们的关系图如下：
 
-```
 ![image](./img/arts_2_js.png)
-```
 
 它们三者的关系看起来非常复杂，但实际目的只有一个，使我们创建的 person 能够“继承”P，从而复用 P 的方法和属性。
 
