@@ -28,7 +28,7 @@ LeetCode 416. Partition Equal Subset Sum
 >Explanation: The array cannot be partitioned into equal sum subsets.
 >```
 
-将一个数组分为两个子集，判断是否存在两个子集的和相等的情况。如果两个子集和相等，即原数组和的一半。
+将一个数组分为两个子集，判断是否存在两个子集的和相等的情况。如果两个子集和相等，即为原数组和的一半。
 
 题目就变为判断数据是否存在一个子集，它的和等于数组所有元素和一半，我们可以先求出数组的总和，这个即为已知量。
 
@@ -219,7 +219,9 @@ person.[[prototype]] == P // true
 
 它们三者的关系看起来非常复杂，但实际目的只有一个，使我们创建的 person 能够“继承”P，从而复用 P 的方法和属性。
 
+```
 person.toString() // "[object Object]"
+```
 
 在创建 person 时并没有添加 toString 属性，也没有在 Person 函数中声明过，而是使用了原型 P 中定义的方法。
 
