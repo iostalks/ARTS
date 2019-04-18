@@ -37,39 +37,41 @@ LeetCode 72 Edit Distance:
 
 用代码表达是这样：
 
-	function minDistanceHelper(a, b, i, j, dist) {
-	    const m = a.length;
-	    const n = b.length
-	    if (m === i || n === j) {
-	        if (i < m) {
-	            // a 单词比 b 单词长，需要补齐 b 单词的距离
-	            dist += m - i;
-	        }
-	        if (j < n) {
-	            dist += n - j;
-	        }
-	        if (dist < minDist) {
-	            minDist = dist;
-	        }
-	        return
-	    }
-	    if (a[i] == b[j]) {
-	        // 不需要编辑
-	        minDistanceHelper(a, b, i+1, j+1, dist);
-	    }
-	    minDistanceHelper(a, b, i+1, j, dist+1); // 2、4
-	    minDistanceHelper(a, b, i, j+1, dist+1); // 1、3
-	    minDistanceHelper(a, b, i+1, j+1, dist+1); // 5、6
+```javascript
+function minDistanceHelper(a, b, i, j, dist) {
+    const m = a.length;
+    const n = b.length
+    if (m === i || n === j) {
+		if (i < m) {
+            // a 单词比 b 单词长，需要补齐 b 单词的距离
+			dist += m - i;
+		}
+		if (j < n) {
+			dist += n - j;
+		}
+		if (dist < minDist) {
+			minDist = dist;
+		}
+		return
 	}
-	
-	var minDist = Number.MAX_VALUE;
-	var minDistance = function(word1, word2) {
-	    console.log(word1, word2);
-	    const m = word1.length;
-	    const n = word2.length;
-	    minDistanceHelper(word1, word2, 0, 0, 0);
-	    return minDist;
-	};
+	if (a[i] == b[j]) {
+		// 不需要编辑
+		minDistanceHelper(a, b, i+1, j+1, dist);
+	}
+	minDistanceHelper(a, b, i+1, j, dist+1); // 2、4
+	minDistanceHelper(a, b, i, j+1, dist+1); // 1、3
+	minDistanceHelper(a, b, i+1, j+1, dist+1); // 5、6
+}
+
+var minDist = Number.MAX_VALUE;
+var minDistance = function(word1, word2) {
+    console.log(word1, word2);
+    const m = word1.length;
+    const n = word2.length;
+    minDistanceHelper(word1, word2, 0, 0, 0);
+    return minDist;
+};
+```
 
 不过这里使用回溯的效率很低，存在很多重复计算的情况，并且还需要全局变量维护结果，甚是丑陋。
 
@@ -93,46 +95,47 @@ LeetCode 72 Edit Distance:
 
 完整的代码如下：
 
-	function min(a, b, c) {
-	    let min = a;
-	    if (b < min) {
-	        min = b;
-	    }
-	    if (c < min) {
-	        min = c
-	    }
-	    return min;
-	}
-	
-	var minDistance = function(word1, word2) {
-	    const m = word1.length + 1, n = word2.length + 1;
-	    const minDist = [];
-	    const row0 = []
-	    // 填充第一行数据
-	    for (let j = 0; j < n; ++j) {
-	        row0.push(j);
-	    }
-	    minDist.push(row0);
-	    // 创建 1~m 个数组，填充第一个元素，也就是二维数组的第一列
-	    for (let i = 1; i < m; ++i) {
-	        let row = [];
-	        row[0] = i;
-	        minDist.push(row);
-	    }
-	    // 填 minDist 表 [1...m][1...n]
-	    for (let i = 1; i < m; ++i) {
-	        for (let j = 1; j < n; ++j) {
-	            if (word1[i-1] == word2[j-1]) {
-	                minDist[i][j] = min(minDist[i-1][j-1], minDist[i][j-1] + 1, minDist[i-1][j] + 1);
-	            } else {
-	                minDist[i][j] = min(minDist[i-1][j-1] + 1, minDist[i][j-1] + 1, minDist[i-1][j] + 1);
-	            }
-	        }
-	    }
-	
-	    return minDist[m-1][n-1];
-	}
+```javascript
+function min(a, b, c) {
+    let min = a;
+    if (b < min) {
+        min = b;
+    }
+    if (c < min) {
+        min = c
+    }
+    return min;
+}
 
+var minDistance = function(word1, word2) {
+    const m = word1.length + 1, n = word2.length + 1;
+    const minDist = [];
+    const row0 = []
+    // 填充第一行数据
+    for (let j = 0; j < n; ++j) {
+        row0.push(j);
+    }
+    minDist.push(row0);
+    // 创建 1~m 个数组，填充第一个元素，也就是二维数组的第一列
+    for (let i = 1; i < m; ++i) {
+        let row = [];
+        row[0] = i;
+        minDist.push(row);
+    }
+    // 填 minDist 表 [1...m][1...n]
+    for (let i = 1; i < m; ++i) {
+        for (let j = 1; j < n; ++j) {
+            if (word1[i-1] == word2[j-1]) {
+                minDist[i][j] = min(minDist[i-1][j-1], minDist[i][j-1] + 1, minDist[i-1][j] + 1);
+            } else {
+                minDist[i][j] = min(minDist[i-1][j-1] + 1, minDist[i][j-1] + 1, minDist[i-1][j] + 1);
+            }
+        }
+    }
+
+    return minDist[m-1][n-1];
+}
+```
 
 ## Review
 
