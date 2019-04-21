@@ -11,22 +11,22 @@ LeetCode 416. Partition Equal Subset Sum
 >The array size will not exceed 200.
 >
 >Example 1:
->```
+>
 >Input: [1, 5, 11, 5]
 >
 >Output: true
 >
 >Explanation: The array can be partitioned as [1, 5, 5] and [11].
->```
+>
 >
 >Example 2:
->```
+>
 >Input: [1, 2, 3, 5]
 >
 >Output: false
 >
 >Explanation: The array cannot be partitioned into equal sum subsets.
->```
+>
 
 将一个数组分为两个子集，判断是否存在两个子集的和相等的情况。如果两个子集和相等，即为原数组和的一半。
 
@@ -46,7 +46,7 @@ LeetCode 416. Partition Equal Subset Sum
 
 将 nums = {1, 5, 5, 11 } 递推情况画成表格如下：
 
-![image](./img/arts_2_algo.png)
+![arts_2_algo.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_algo.png)
 
 第 0 个元素选择需要特殊处理，不选择时和为 0，选择和为 nums[0]，即 1。
 接下来的选择，都是基于前一次，选择或不选择的结果。红色代表不选择本次元素的结果（即与上一次相同），绿色表示选择了本次的元素。
@@ -91,6 +91,7 @@ var canPartition = function(nums) {
     return states[n-1][sum] == true;
 }
 ```
+
 提交了下，发现效率极低。上述代码的时间复杂度和空间复杂度都是 `O(m*n)`;
 
 其实空间复杂度和时间复杂度都能够再优化，通过上图其实能发现，在纵向上只要有一个为 true，一列都会是 true，所以可以将二维数组纵向压缩成一维的。
@@ -151,11 +152,11 @@ Node.js 为 JavaScript 提供不同于浏览器的运行时的能力，所以可
 
 Xcode 重签名其实很简单，打开“钥匙串”应用程序，选中“登录”，然后按如下如创建证书。
 
-![image](./img/arts_2_vim.png)
+![arts_2_vim.png](https://raw.githubusercontent.comiostalksimagesmasterblogarts_2_vim.png)
 
 为证书取一个名字，这里使用 XcodeSiger，并选择自签名类型。
 
-![image](./img/arts_2_vim2.png)
+![arts_2_vim.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_vim.png)
 
 接着在终端中执行如下重签名命令（最后一个参数是 Xcode 的路径）：
 
@@ -215,7 +216,7 @@ person.[[prototype]] == P // true
 
 它们的关系图如下：
 
-![image](./img/arts_2_js.png)
+![arts_2_js.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_js.png)
 
 它们三者的关系看起来非常复杂，但实际目的只有一个，使我们创建的 person 能够“继承”P，从而复用 P 的方法和属性。
 
@@ -234,7 +235,3 @@ person 能够与原型建立联系是通过函数隐式构建的。
 如果当把函数当函数看，它就是用来调用，或者创建对象，并链接到原型的。如果把函数当对象看，它也是由函数创建，并具有 [[prototype]] 属性的指向它的原型 Function。
 
 对象都会具有 [[prototype]] 和 constructor 属性，前者指向它的原型，后者指向它的构造函数。函数都会具有 prototype 属性，所有由该函数构建的对象都会指向它。
-
-
-
-

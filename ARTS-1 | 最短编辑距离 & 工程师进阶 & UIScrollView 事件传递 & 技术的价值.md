@@ -85,7 +85,7 @@ var minDistance = function(word1, word2) {
 
 如下是单词`abc`和`acb`的填表结果。
 
-![image](https://github.com/iostalks/ARTS/blob/master/img/arts_1_array.png)
+![image](https://github.com/iostalks/images/blob/master/blog/arts_1_array.png)
 
 第一行和第一列代表从空字符到当前字符结尾的单词，需要编辑的距离，由单词长度决定，所以可以先填上。之后根据左、上、左上的值来计算当前格子的最短编辑距离。如果当前对比的两个字符不相等，则由这三个位置上的编辑距离加一，求最小值得到，如果当前对比的两个字符相等，可能有两种情况得来：
 
