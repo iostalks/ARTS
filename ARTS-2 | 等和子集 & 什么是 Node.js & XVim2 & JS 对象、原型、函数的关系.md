@@ -152,11 +152,11 @@ Node.js 为 JavaScript 提供不同于浏览器的运行时的能力，所以可
 
 Xcode 重签名其实很简单，打开“钥匙串”应用程序，选中“登录”，然后按如下如创建证书。
 
-![arts_2_vim.png](https://raw.githubusercontent.comiostalksimagesmasterblogarts_2_vim.png)
+![arts_2_vim.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_vim.png)
 
 为证书取一个名字，这里使用 XcodeSiger，并选择自签名类型。
 
-![arts_2_vim.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_vim.png)
+![arts_2_vim2.png](https://raw.githubusercontent.com/iostalks/images/master/blog/arts_2_vim2.png)
 
 接着在终端中执行如下重签名命令（最后一个参数是 Xcode 的路径）：
 
