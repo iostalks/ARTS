@@ -9,6 +9,6 @@ ARTS 是左耳朵耗子发起的一个程序员进阶训练活动，个人认为
 
 这些事情只要坚持做肯定会有不少收获，关键还是在于如何坚持。以文章的形式整理发布当做自己的一个 Flag，或许能增加一份动力。
 
-- [ARTS-1 | 最短编辑距离 / 工程师进阶 / UIScrollView 事件传递 / 技术的价值](./ARTS-1 | 最短编辑距离 & 工程师进阶 & UIScrollView 事件传递 & 技术的价值)
-  
-- [ARTS-2 | 等和子集 / 什么是 Node.js & XVim2 / JS 对象、原型、函数的关系](./ARTS-2 | 等和子集 & 什么是 Node.js & XVim2 & JS 对象、原型、函数的关系)
+- [ARTS-1 | 最短编辑距离 / 工程师进阶 / UIScrollView 事件传递 / 技术的价值](https://github.com/iostalks/ARTS/blob/master/ARTS-1%20%7C%20%E6%9C%80%E7%9F%AD%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BB%20%26%20%E5%B7%A5%E7%A8%8B%E5%B8%88%E8%BF%9B%E9%98%B6%20%26%20UIScrollView%20%E4%BA%8B%E4%BB%B6%E4%BC%A0%E9%80%92%20%26%20%E6%8A%80%E6%9C%AF%E7%9A%84%E4%BB%B7%E5%80%BC.md)
+
+- [ARTS-2 | 等和子集 / 什么是 Node.js & XVim2 / JS 对象、原型、函数的关系](https://github.com/iostalks/ARTS/blob/master/ARTS-2%20%7C%20%E7%AD%89%E5%92%8C%E5%AD%90%E9%9B%86%20%26%20%E4%BB%80%E4%B9%88%E6%98%AF%20Node.js%20%26%20XVim2%20%26%20JS%20%E5%AF%B9%E8%B1%A1%E3%80%81%E5%8E%9F%E5%9E%8B%E3%80%81%E5%87%BD%E6%95%B0%E7%9A%84%E5%85%B3%E7%B3%BB.md)
