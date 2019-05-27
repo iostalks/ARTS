@@ -20,3 +20,5 @@ ARTS 是左耳朵耗子发起的一个程序员进阶训练活动，个人认为
 - [ARTS-5 | 最长无重复子串 / Yarn 的优势 / let 块作用域 / 向架构进发](https://github.com/iostalks/ARTS/blob/master/ARTS-5%20%7C%20%E6%9C%80%E9%95%BF%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%90%E4%B8%B2%20%26%20Yarn%20%E7%9A%84%E4%BC%98%E5%8A%BF%20%26%20let%20%E5%9D%97%E4%BD%9C%E7%94%A8%E5%9F%9F%20%26%20%E5%90%91%E6%9E%B6%E6%9E%84%E8%BF%9B%E5%8F%91.md)
 
 - [ARTS-6 | 股票买卖 / 阅读源码技巧 / JS 中的各种枚举 / 如何有效的做算法题](https://github.com/iostalks/ARTS/blob/master/ARTS-6%20%20%7C%20%E8%82%A1%E7%A5%A8%E4%B9%B0%E5%8D%96%20%26%20%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81%E6%8A%80%E5%B7%A7%20%26%20JS%20%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E6%9E%9A%E4%B8%BE%20%26%20%E5%A6%82%E4%BD%95%E6%9C%89%E6%95%88%E7%9A%84%E5%81%9A%E7%AE%97%E6%B3%95%E9%A2%98.md)
+
+- [ARTS-7 | 全排列 / 对象间的通信方式 / 策略模式 / iOS 架构]()
